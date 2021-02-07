@@ -6,7 +6,7 @@ let clients = new Set();
 server.on("connection", function (socket) {
 	clients.add(socket);
 
-		socket.on("message", finctoin(message){
+		socket.on("message", function(message){
 			for(let client of clients){
 				client.send(message);
 			}
